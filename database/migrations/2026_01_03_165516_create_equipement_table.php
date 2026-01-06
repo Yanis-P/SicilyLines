@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::disableForeignKeyConstraints();
-        Schema::create('equipement', function (Blueprint $table) {
-            $table->id('idequipement');
-            $table->string('libelleequipement');
+        Schema::create('equipements', function (Blueprint $table) {
+            $table->id('idequipements');
+            $table->string('libelleequipements');
             $table->timestamps();
-            $table->foreignId('bateau_id')->constrained('bateau')->onDelete('cascade');
+            $table->foreignId('bateau_id')->constrained('bateaus')->onDelete('cascade');
         });
     }
 
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('equipement');
+        Schema::dropIfExists('equipements');
     }
 };
