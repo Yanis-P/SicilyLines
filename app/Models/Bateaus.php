@@ -13,12 +13,14 @@ class Bateaus extends Model
     protected $fillable = [
         'nom',
         'slug',
+        'longueur',
+        'largeur',
         'vitesse',
         'image',
     ];
 
     public function equipements(): HasMany
     {
-        return $this->hasMany(Equipements::Class);
+        return $this->hasMany(Equipements::Class, 'bateau_id');
     }
 }

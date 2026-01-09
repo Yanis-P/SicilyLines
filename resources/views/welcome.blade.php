@@ -21,7 +21,7 @@
             </style>
         @endif
     </head>
-    <body>
+    <body background="{{ asset('images/bg/bg-sicile.jpg') }}" class="bg-cover bg-center min-h-screen flex flex-col">
         <header>
             
             @if (Route::has('login'))
@@ -68,6 +68,58 @@
                             <span class="carousel-control-next-icon"></span>
                         </button>
                     </div>
+                </div>
+            </div>
+
+                        <!-- Bloc infos Sicile -->
+            <div class="d-flex justify-content-center mt-5">
+                <div class="bg-white bg-opacity-75 backdrop-blur-md rounded-4 shadow-lg p-4" style="max-width:900px;">
+                    <h2 class="text-center mb-3 fw-semibold">🌞 Bienvenu sur l'intranet</h2>
+
+                    <h2 class="text-center mb-3 fw-semibold">A propos de la Sicile</h2>
+                    <p class="text-center text-muted mb-2">
+                        La Sicile est la plus grande île de la Méditerranée, située au sud de l’Italie.
+                        Connue pour ses paysages volcaniques, ses plages turquoise, ses villages perchés
+                        et son riche patrimoine historique mêlant influences grecques, romaines, arabes et normandes.
+                    </p>
+                    <p class="text-center text-muted mb-0">
+                        Son climat chaud, sa gastronomie méditerranéenne et son identité culturelle forte en font
+                        une destination unique entre Europe et Afrique.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Zone grise avec tableau -->
+            <div class="d-flex justify-content-center mt-5 mb-5">
+                <div class="bg-light rounded-4 shadow-lg p-4" style="width:60%; min-height:260px;">
+                    <h3 class="text-center mb-4 fw-semibold">📊 Secteurs</h3>
+
+                    <table class="table table-borderless text-center align-middle">
+                        <thead>
+                            <tr class="text-muted">
+                                <th>Secteur</th>
+                                <th>Statut</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>...</td>
+                                <td>...</td>
+                            </tr>
+                            <tr>
+                                <td>...</td>
+                                <td>...</td>
+                            </tr>
+                            <tr>
+                                <td>...</td>
+                                <td>...</td>
+                            </tr>
+                            <tr>
+                                <td>...</td>
+                                <td>...</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 

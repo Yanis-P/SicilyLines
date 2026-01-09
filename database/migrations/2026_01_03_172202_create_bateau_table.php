@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('nom')->unique();
             $table->string('slug')->unique();
+            $table->float('longueur');
+            $table->float('largeur');
             $table->integer('vitesse');
             $table->string('image')->nullable();
             $table->timestamps();

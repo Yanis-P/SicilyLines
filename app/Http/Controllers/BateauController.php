@@ -21,7 +21,7 @@ class BateauController extends Controller
     public function show(int $id)
     {
         $bateau = Bateaus::findOrFail($id);
-        return view('show', compact('bateaux'));
+        return view('voirBateau', compact('bateau'));
     }
 
 
@@ -29,6 +29,8 @@ class BateauController extends Controller
     {
         $request->validate([
             'nom' => 'required|string|max:255',
+            'longueur' => 'required|numeric',
+            'largeur' => 'required|numeric',
             'vitesse' => 'required|integer',
             'image' => 'nullable|image',
             'equipement.*' => 'nullable|string|max:255'
@@ -54,6 +56,8 @@ class BateauController extends Controller
         $bateau = Bateaus::create([
             'nom' => $request->nom,
             'slug' => $slug,
+            'longueur' => $request->longueur,
+            'largeur' => $request->largeur,
             'vitesse' => $request->vitesse,
             'image' => $path,
         ]);
@@ -70,7 +74,7 @@ class BateauController extends Controller
             }
         }
 
-        return redirect()->route('/dashboard')->with('success', 'Bateau ajouté avec succès');
+        return redirect('/dashboard')->with('success', 'Bateau ajouté avec succès');
     }
 }
 

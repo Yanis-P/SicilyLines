@@ -19,6 +19,8 @@ Route::get('/dashboard', function () {
 Route::get('/dashboard', [BateauController::class, 'index'])->name('dashboard');
 //Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
+Route::get('/voirBateau/{id}', [EquipementController::class, 'show'])->name('voirBateau');
+
 
 
 Route::get('/ajouterBateau', function () {
